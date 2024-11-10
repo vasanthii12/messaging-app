@@ -82,8 +82,12 @@ By following these steps, you'll be up and running with the application locally!
 5. **Set Up the Database**:
    - The app uses SQLite for simplicity. Run the following command to set up the database:
    ```bash
-   python create_db.py
-6. **Run the Application**:
+   python models.py
+6. **Import messages from CSV**:
+   - Run the command:
+   ```bash
+   python import_messages.py
+7. **Run the Application**:
    - Run the Application:
    ```bash
    python app.py
