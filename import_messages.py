@@ -1,10 +1,9 @@
-# import_messages.py
 import csv
 from datetime import datetime
-from models import Session, Message, Priority
+from models import Session, Message, Priority  # Assuming 'models.py' contains your Session setup
 
 def import_messages_from_csv(csv_file_path):
-    session = Session()
+    session = Session()  # Create session from updated Session factory
     
     with open(csv_file_path, 'r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
@@ -21,8 +20,6 @@ def import_messages_from_csv(csv_file_path):
                     customer_id=customer_id,
                     message_text=message_text,
                     timestamp=timestamp  # Added timestamp
-                    # status="new",  # Removed status
-                    # priority=Priority.MEDIUM  # Removed priority
                 )
                 
                 # Add to the session
@@ -44,5 +41,3 @@ def import_messages_from_csv(csv_file_path):
 if __name__ == "__main__":
     csv_file_path = 'messages.csv'  # Update with your CSV file path
     import_messages_from_csv(csv_file_path)
-
-

@@ -1,9 +1,8 @@
-# models.py (update Message model)
+import os
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Enum, Text
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
 import enum
-import os
 
 Base = declarative_base()
 
@@ -11,7 +10,6 @@ class Priority(enum.Enum):
     LOW = "low"
     MEDIUM = "medium"
     HIGH = "high"
- 
 
 class Message(Base):
     __tablename__ = 'messages'
@@ -26,8 +24,12 @@ class Message(Base):
     resolved_at = Column(DateTime, nullable=True)
     agent_id = Column(Integer, nullable=True)
 
-# Initialize database
-engine = create_engine('sqlite:///database.db')
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
+# Fetch the DATABASE_URL from the environment variable (Render will automatically set it)
+DATABASE_URL = os.getenv('DATABASE_URL', 'postgresql://localhost/mydb')  # Fallback for local development
 
+# Create the SQLAlchemy engine for PostgreSQL
+engine = create_engine(DATABASE_URL, connect_args={"sslmode": "require"} if "neon" in DATABASE_URL else {})
+
+Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
