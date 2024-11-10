@@ -41,5 +41,4 @@ database.db
 # Windows files
 Thumbs.db
 
-# CSV files or any user data (if you don’t want to commit CSV imports)
-*.csv
+
