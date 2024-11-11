@@ -117,7 +117,5 @@ Following additional features are being implemented in the application-
 ![Dashboard](overview/6.png)
 ![Dashboard](overview/5.png)
 
-- Here is the video of the application functioning and code walkthrough covering the crucial aspects
-![Dashboard](overview/video.mp4)
   
    
