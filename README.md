@@ -9,6 +9,7 @@ This project is a Customer Service Messaging application that allows support age
 - [Installation](#Installation)
 - [Usage](#usage)
 - [Prerequisites](#Prerequisites)
+- [Additional Features](#additional-features)
 
 # Overview
 
@@ -96,13 +97,27 @@ By following these steps, you'll be up and running with the application locally!
 ### Usage
 Once the app is up and running, you can navigate to the following pages:
 
-Inbox: View all customer messages, filter by status and priority, and sort by timestamp.
-Message Detail: View individual messages, update their priority, and send a response.
-Search: Use the search bar to find messages or customers by their ID or message content.
-Update Status: Change the status of a message to reflect its current progress (New, In Progress, Resolved).  
+- Inbox: View all customer messages, filter by status and priority, and sort by timestamp.
+- Message Detail: View individual messages, update their priority, and send a response.
+- Search: Use the search bar to find messages or customers by their ID or message content.
+- Update Status: Change the status of a message to reflect its current progress (New, In Progress, Resolved).  
 
+### Additional Features
 
+Following additional features are being implemented in the application-
+  - Search functionality and to allow agents to search over incoming messages or customers
+  - Canned message feature that allows agents to quickly respond to enquiries using a set of pre-configured stock messages
    
-     
-   
+ # Customer Service Messaging App
+
+![Dashboard](overview/1.png)
+![Dashboard](overview/2.png)
+![Dashboard](overview/3.png)
+![Dashboard](overview/4.png)
+![Dashboard](overview/6.png)
+![Dashboard](overview/5.png)
+
+- Here is the video of the application functioning and code walkthrough covering the crucial aspects
+![Dashboard](overview/video.mp4)
+  
    
