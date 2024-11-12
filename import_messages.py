@@ -1,6 +1,6 @@
 import csv
 from datetime import datetime
-from models import Session, Message, Priority  # Assuming 'models.py' contains your Session setup
+from models import Session, Message, Priority 
 
 def import_messages_from_csv(csv_file_path):
     session = Session()  # Create session from updated Session factory
@@ -10,7 +10,7 @@ def import_messages_from_csv(csv_file_path):
         
         for row in reader:
             try:
-                # Parse CSV fields - adjust these field names to match your CSV
+                # Parse CSV fields - adjust these field names acc to CSV
                 customer_id = int(row['User ID'])
                 message_text = row['Message Body']  # Updated field name
                 timestamp = datetime.strptime(row['Timestamp (UTC)'], "%m/%d/%Y %H:%M")  # New timestamp parsing
